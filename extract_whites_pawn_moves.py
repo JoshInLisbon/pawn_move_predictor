@@ -45,6 +45,10 @@ def extract_whites_pawn_moves():
       print(f"Game {i}")
       board = game.board()
       for move in game.mainline_moves():
+        if board.turn == False:
+          board.push(move)
+          continue
+
         pawn_move = board.piece_at(move.from_square).piece_type == chess.PAWN
 
         if pawn_move:
