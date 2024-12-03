@@ -69,7 +69,7 @@ def extract_whites_pawn_moves():
                     "eval_change": eval_change(before_eval, after_eval),
                   })
 
-      if i == 250:
+      if i == 2000:
         break
 
     with open("pawn_moves.csv", "w", newline="") as csv_file:
